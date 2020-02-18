@@ -21,7 +21,7 @@ namespace DompdfModule\Service;
 
 use Dompdf\Dompdf;
 use Dompdf\Options;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 
 class DompdfFactory implements FactoryInterface

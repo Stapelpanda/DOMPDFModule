@@ -20,9 +20,9 @@
 namespace DompdfModule\View\Renderer;
 
 use DompdfModule\View\Model\PdfModel;
-use Zend\View\Exception\InvalidArgumentException;
-use Zend\View\Renderer\RendererInterface as Renderer;
-use Zend\View\Resolver\ResolverInterface as Resolver;
+use Laminas\View\Exception\InvalidArgumentException;
+use Laminas\View\Renderer\RendererInterface as Renderer;
+use Laminas\View\Resolver\ResolverInterface as Resolver;
 use Dompdf\Dompdf;
 
 class PdfRenderer implements Renderer

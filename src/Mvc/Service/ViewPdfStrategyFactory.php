@@ -19,7 +19,7 @@
 
 namespace DompdfModule\Mvc\Service;
 
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 use Interop\Container\ContainerInterface;
 use DompdfModule\View\Strategy\PdfStrategy;
 

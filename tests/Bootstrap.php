@@ -30,6 +30,6 @@ if (is_readable(__DIR__ . '/TestConfiguration.php')) {
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$application = \Zend\Mvc\Application::init($configuration);
+$application = \Laminas\Mvc\Application::init($configuration);
 $serviceManager = $application->getServiceManager();
 TestCase::setServiceManager($serviceManager);

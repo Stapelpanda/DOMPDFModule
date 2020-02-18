@@ -19,7 +19,7 @@
 
 namespace DompdfModule\View\Strategy;
 
-use Zend\View\Model\JsonModel;
+use Laminas\View\Model\JsonModel;
 use DompdfModule\Framework\TestCase;
 use DompdfModule\View\Model\PdfModel;
 use DompdfModule\View\Renderer\PdfRenderer;
@@ -72,7 +72,7 @@ class PdfRendererTest extends TestCase
     }
 
     /**
-     * @expectedException \Zend\View\Exception\InvalidArgumentException
+     * @expectedException \Laminas\View\Exception\InvalidArgumentException
      */
     public function testItDoesNotRenderOtherModels()
     {
@@ -85,7 +85,7 @@ class PdfRendererTest extends TestCase
     }
 
     /**
-     * @expectedException \Zend\View\Exception\InvalidArgumentException
+     * @expectedException \Laminas\View\Exception\InvalidArgumentException
      */
     public function testItDoesNotRenderNamedModels()
     {
@@ -104,9 +104,9 @@ class PdfRendererTest extends TestCase
     {
         parent::setUp();
 
-        $this->htmlRenderer = $this->getMock('Zend\View\Renderer\RendererInterface');
-        $this->resolver = $this->getMock('Zend\View\Resolver\ResolverInterface');
-        $this->engine = $this->getMockBuilder('\Dompdf\Dompdf')->disableOriginalConstructor()->getMock();
+        $this->htmlRenderer = $this->getMock(Laminas\View\Renderer\RendererInterface::class);
+        $this->resolver = $this->getMock(Laminas\View\Resolver\ResolverInterface::class);
+        $this->engine = $this->getMockBuilder(\Dompdf\Dompdf::class)->disableOriginalConstructor()->getMock();
 
         $this->renderer = new PdfRenderer();
         $this->renderer->setHtmlRenderer($this->htmlRenderer);

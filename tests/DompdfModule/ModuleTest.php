@@ -19,7 +19,7 @@
 
 namespace DompdfModule;
 
-use Zend\ModuleManager\Feature\ConfigProviderInterface;
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
 
 class ModuleTest extends \PHPUnit_Framework_TestCase
 {

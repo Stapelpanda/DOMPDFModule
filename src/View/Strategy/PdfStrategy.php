@@ -21,10 +21,11 @@ namespace DompdfModule\View\Strategy;
 
 use DompdfModule\View\Model;
 use DompdfModule\View\Renderer\PdfRenderer;
-use Zend\EventManager\AbstractListenerAggregate;
-use Zend\EventManager\EventManagerInterface;
-use Zend\EventManager\ListenerAggregateInterface;
-use Zend\View\ViewEvent;
+use Laminas\EventManager\AbstractListenerAggregate;
+use Laminas\EventManager\EventManagerInterface;
+use Laminas\EventManager\ListenerAggregateInterface;
+use Laminas\Http\PhpEnvironment\Response;
+use Laminas\View\ViewEvent;
 
 class PdfStrategy extends AbstractListenerAggregate implements ListenerAggregateInterface
 {
@@ -93,7 +94,10 @@ class PdfStrategy extends AbstractListenerAggregate implements ListenerAggregate
             // No output to display. Good bye!
             return;
         }
-        
+
+        /**
+         * @var Response $response
+         */
         $response = $event->getResponse();
         $response->setContent($result);
 
